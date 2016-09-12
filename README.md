@@ -1,4 +1,4 @@
-# mediaflux
+# MEDIAFLUX
 
 ## Useful Aterm commands
 
@@ -22,6 +22,13 @@ $ asset.create :namesapce <ns>
 # view projects on the server
 $ cd projects
 $ ls
+
+# use MF Desktop (web client) to add elements to doc types
+$ asset.doc.type.list :namespace <ns>
+
+# use MF Desktop (web client) to create dictionary items
+$ dictionary.namespace.create : namesapce <ns>
+
 
 ```
 
