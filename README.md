@@ -35,7 +35,7 @@ $ dictionary.namespace.create : namesapce <ns>
 
 ```
 
-#Export tcl script to install Doc type on another server (dev -> prod)
+## Export tcl script to install Doc type on another server (dev -> prod)
 ```sh
 $ asset.doc.type.script.create :type <ns:doctype>
                                 :out file://path/to/file.tcl
