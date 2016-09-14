@@ -20,8 +20,15 @@ $ asset.store.describe :name <storeName>
 $ asset.get :id <id>
 $ asset.destroy :id <id>
 
-# list available doc types
+# list available doc types (global)
 $ asset.doc.type.list
+$ asset.doc.type.list :namespace <ns>
+
+# create document type in namespace ns with a string field called name
+$ asset.doc.type.create 
+                :type ns:test 
+                :definition < :element -name x -type string >
+
 
 # view documentation for doc type (eg. mf-note)
 $ asset.doc.type.describe :type <docTypeName>
