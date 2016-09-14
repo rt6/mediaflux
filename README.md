@@ -27,9 +27,10 @@ $ asset.doc.type.list
 $ asset.doc.type.describe :type <docTypeName>
 
 # the in-file could be a Java inputstream
+# NOTE: there is a whitespace between the closing angle brackets "> >"
 $ asset.create :namesapce <ns>
                 :meta <: mf-note
-                        <: note "Hello World" >>
+                        <: note "Hello World" > >
                 :in-file <local-path>
 
 # view projects on the server
