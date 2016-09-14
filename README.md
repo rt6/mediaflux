@@ -10,6 +10,9 @@ $ asset.doc.namespace.list
 $ asset.doc.namespace.create :namespace <ns>
 $ asset.namespace.describe :namespace <ns>
 
+# list stores available
+$ asset.store.list
+
 # describe stores (places to store files, images, videos, asset content)
 $ asset.store.describe :name <storeName>
 
