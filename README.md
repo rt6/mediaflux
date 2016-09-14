@@ -3,12 +3,22 @@
 ## Useful Aterm commands
 
 ```sh
+# list document type namespaces
 $ asset.doc.namespace.list
+
+# create and describe document type namespaces
 $ asset.doc.namespace.create :namespace <ns>
 $ asset.namespace.describe :namespace <ns>
+
+# describe stores (places to store files, images, videos, asset content)
 $ asset.store.describe :name <storeName>
+
+# retrieve a data asset
 $ asset.get :id <id>
 $ asset.destroy :id <id>
+
+# list available doc types
+$ asset.doc.type.list
 
 # view documentation for doc type (eg. mf-note)
 $ asset.doc.type.describe :type <docTypeName>
