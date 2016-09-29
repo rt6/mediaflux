@@ -54,6 +54,12 @@ $ asset.doc.type.list :namespace testNamespace
 $ asset.doc.type.describe :type testDocTypeName
 $ asset.doc.type.describe :type test-Namespace:testDocTypeName
 
+# create document type in namespace ns with a string field called name
+$ asset.doc.type.create 
+                :type ns:test 
+                :definition < :element -name x -type string >
+
+
 # ---
 # Data stores
 # ---
@@ -72,10 +78,7 @@ $ asset.store.describe :name testStoreName
 $ asset.get :id 324234
 $ asset.destroy :id 32423432
 
-# create document type in namespace ns with a string field called name
-$ asset.doc.type.create 
-                :type ns:test 
-                :definition < :element -name x -type string >
+
 
 # ---
 # Create asset
