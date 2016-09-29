@@ -4,16 +4,26 @@
 In mediaflux:
 - assets are virtual containers for metadata and a content (eg. a data file, image, video, sound file, etc)
 - in mediaflux, metadata are documents which are instances of document type. (so you need to define document types first before entering metadata)
-- assets can be associated with multiple documents, but can only be associated to one file 
+- assets can be associated with multiple (metadata) documents, but can only be associated to one content 
 - assets are stored in asset namespaces
 - document types are stored in document type name spaces
-- files are stored in "stores" (the underlying storage can be file system storage, aws s3, etc)
+- content are stored in "stores" (the underlying storage can be file system storage, aws s3, etc)
+- content can also be stored outside of mediaflux using links
 - namespaces are essentially "directories"
 - you can create namespaces within name spaces
+- everything (documents, document types, etc.) are defined and stored as using XML
 
 ## Talking to Mediaflux
-(1) Raw TCP/IP, (2) HTTP, (3) HTTPS, (4) SOAP.   
+1. Raw TCP/IP 
+2. HTTP
+3. HTTPS
+4. SOAP   
 Use Mediaflux client library to write Java and .Net applications that talk to mediaflux server
+
+## Aterm 
+- is essentially a command-line SOAP client to the mediaflux server with TCL scripting capabilities
+- it can be used to execute server-side `mediaflux services`
+
 
 ## Useful Aterm commands
 
