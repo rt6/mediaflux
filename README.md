@@ -1,38 +1,79 @@
 # MEDIAFLUX
 
+## Concepts
+In mediaflux:
+- assets are virtual containers for metadata and a content (eg. a data file, image, video, sound file, etc)
+- in mediaflux, metadata are documents which are instances of document type. (so you need to define document types first before entering metadata)
+- assets can be associated with multiple documents, but can only be associated to one file 
+- assets are stored in asset namespaces
+- document types are stored in document type name spaces
+- files are stored in "stores" (the underlying storage can be file system storage, aws s3, etc)
+- namespaces are essentially "directories"
+- you can create namespaces within name spaces
+
+## Talking to Mediaflux
+(1) Raw TCP/IP, (2) HTTP, (3) HTTPS, (4) SOAP.   
+Use Mediaflux client library to write Java and .Net applications that talk to mediaflux server
+
 ## Useful Aterm commands
 
 ```sh
+
+# ---
+* Assets
+# ---
+# list asset namespaces
+$ asset.namespace.list 
+
+$ get details of asset namespace
+$ asset.namespace.describe :namespace testNamespace
+
+Another way to do this, is to treat aTerm like a file system to list assets in a namespace:
+$ cd /testNamespace
+$ ls
+
+
+# ---
+* Document types
+# ---
 # list document type namespaces
 $ asset.doc.namespace.list
 
-# create and describe document type namespaces
-$ asset.doc.namespace.create :namespace <ns>
-$ asset.namespace.describe :namespace <ns>
+# list available doc types 
+$ asset.doc.type.list :namespace testNamespace
 
+# create and describe document type namespaces
+$ asset.doc.namespace.create :namespace testNamespace
+$ asset.namespace.describe :namespace testNamespace
+
+# view documentation for doc type (eg. mf-note)
+$ asset.doc.type.describe :type testDocTypeName
+$ asset.doc.type.describe :type test-Namespace:testDocTypeName
+
+# ---
+* Data stores
+# ---
 # list stores available
 $ asset.store.list
 
 # describe stores (places to store files, images, videos, asset content)
-$ asset.store.describe :name <storeName>
+$ asset.store.describe :name testStoreName
 
+# ---
+* Retrieve asset
+# ---
 # retrieve a data asset
-$ asset.get :id <id>
-$ asset.destroy :id <id>
-
-# list available doc types (global)
-$ asset.doc.type.list
-$ asset.doc.type.list :namespace <ns>
+$ asset.get :id 324234
+$ asset.destroy :id 32423432
 
 # create document type in namespace ns with a string field called name
 $ asset.doc.type.create 
                 :type ns:test 
                 :definition < :element -name x -type string >
 
-
-# view documentation for doc type (eg. mf-note)
-$ asset.doc.type.describe :type <docTypeName>
-
+# ---
+* Create asset
+# ---
 # the in-file could be a Java inputstream
 # NOTE: there is a whitespace between the closing angle brackets "> >"
 $ asset.create :namesapce <ns>
@@ -40,9 +81,7 @@ $ asset.create :namesapce <ns>
                         <: note "Hello World" > >
                 :in-file <local-path>
 
-# view projects on the server
-$ cd projects
-$ ls
+
 ```
 
 ## MF Desktop (web client)
