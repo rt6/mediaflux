@@ -22,10 +22,12 @@ Use Mediaflux client library to write Java and .Net applications that talk to me
 # ---
 # Assets
 # ---
+
 # list asset namespaces
 $ asset.namespace.list 
 
-# get details of asset namespace
+# create and get details of asset namespace
+$ asset.namespace.create :namespace testNamespace
 $ asset.namespace.describe :namespace testNamespace
 
 # Another way to do this, is to treat aTerm like a file system to list assets in a namespace:
@@ -36,15 +38,17 @@ $ ls
 # ---
 # Document types
 # ---
+
 # list document type namespaces
 $ asset.doc.namespace.list
 
-# list available doc types 
-$ asset.doc.type.list :namespace testNamespace
-
-# create and describe document type namespaces
+# create and get details of document type namespaces
 $ asset.doc.namespace.create :namespace testNamespace
-$ asset.namespace.describe :namespace testNamespace
+$ asset.doc.namespace.describe :namespace testNamespace
+
+# list available doc types in global and specific namespace
+$ asset.doc.type.list 
+$ asset.doc.type.list :namespace testNamespace
 
 # view documentation for doc type (eg. mf-note)
 $ asset.doc.type.describe :type testDocTypeName
@@ -53,6 +57,7 @@ $ asset.doc.type.describe :type test-Namespace:testDocTypeName
 # ---
 # Data stores
 # ---
+
 # list stores available
 $ asset.store.list
 
@@ -62,6 +67,7 @@ $ asset.store.describe :name testStoreName
 # ---
 # Retrieve asset
 # ---
+
 # retrieve a data asset
 $ asset.get :id 324234
 $ asset.destroy :id 32423432
@@ -74,6 +80,7 @@ $ asset.doc.type.create
 # ---
 # Create asset
 # ---
+
 # the in-file could be a Java inputstream
 # NOTE: there is a whitespace between the closing angle brackets "> >"
 $ asset.create :namesapce <ns>
