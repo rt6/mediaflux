@@ -20,21 +20,21 @@ Use Mediaflux client library to write Java and .Net applications that talk to me
 ```sh
 
 # ---
-* Assets
+# Assets
 # ---
 # list asset namespaces
 $ asset.namespace.list 
 
-$ get details of asset namespace
+# get details of asset namespace
 $ asset.namespace.describe :namespace testNamespace
 
-Another way to do this, is to treat aTerm like a file system to list assets in a namespace:
+# Another way to do this, is to treat aTerm like a file system to list assets in a namespace:
 $ cd /testNamespace
 $ ls
 
 
 # ---
-* Document types
+# Document types
 # ---
 # list document type namespaces
 $ asset.doc.namespace.list
@@ -51,7 +51,7 @@ $ asset.doc.type.describe :type testDocTypeName
 $ asset.doc.type.describe :type test-Namespace:testDocTypeName
 
 # ---
-* Data stores
+# Data stores
 # ---
 # list stores available
 $ asset.store.list
@@ -60,7 +60,7 @@ $ asset.store.list
 $ asset.store.describe :name testStoreName
 
 # ---
-* Retrieve asset
+# Retrieve asset
 # ---
 # retrieve a data asset
 $ asset.get :id 324234
@@ -72,7 +72,7 @@ $ asset.doc.type.create
                 :definition < :element -name x -type string >
 
 # ---
-* Create asset
+# Create asset
 # ---
 # the in-file could be a Java inputstream
 # NOTE: there is a whitespace between the closing angle brackets "> >"
