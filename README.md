@@ -100,7 +100,7 @@ $ asset.destroy :id 32423432
 $ asset.create :namesapce testNS
                 :meta < :mf-note
                         < :note "Hello World" > >
-                :in-file /local/path/to/afile.dat
+                :in file:/local/path/to/afile.dat
 
 
 ```
@@ -119,9 +119,9 @@ $ dictionary.namespace.create : namesapce <ns>
 ## Export tcl script to install Doc type on another server (dev -> prod)
 ```sh
 $ asset.doc.type.script.create :type <ns:doctype>
-                                :out file://path/to/file.tcl
+                                :out file:/path/to/file.tcl
 
 #example                                
 $ asset.doc.type.script.create :type myns:people
-                                :out file://home/user123/MakePeopleDocType.tcl
+                                :out file:/home/user123/MakePeopleDocType.tcl
 ```
