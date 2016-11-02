@@ -103,6 +103,19 @@ $ asset.create :namesapce testNS
                 :in file:/local/path/to/afile.dat
 
 
+# ---
+# Asset Query Language
+# ---
+
+# select items from namespace that match criteria in where clause
+$ asset.query :namespace parentNs:subNs 
+              :where xpath(doc-type/element\[@attributeName='value'\]) has value and
+                     xpath(doc-type/element) = 'value'
+
+
+# execute service on each item returned from query
+$ asset.query :where namespace>=parentNs :action pipe :service -name asset.destroy
+
 ```
 
 ## MF Desktop (web client)
