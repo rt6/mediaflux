@@ -1,6 +1,7 @@
 # MEDIAFLUX
 
 ## Concepts
+In Mediaflux:
 
 - assets are virtual containers for metadata and a content (eg. a data file, image, video, sound file, etc)
 - in mediaflux, metadata are documents which are instances of document type. (so you need to define document types first before entering metadata)
