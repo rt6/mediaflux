@@ -2,6 +2,7 @@
 
 ## Concepts
 In mediaflux:
+
 - assets are virtual containers for metadata and a content (eg. a data file, image, video, sound file, etc)
 - in mediaflux, metadata are documents which are instances of document type. (so you need to define document types first before entering metadata)
 - assets can be associated with multiple (metadata) documents, but can only be associated to one content 
@@ -21,6 +22,7 @@ In mediaflux:
 Use Mediaflux client library to write Java and .Net applications that talk to mediaflux server
 
 ## Aterm 
+
 - is essentially a command-line SOAP client to the mediaflux server with TCL scripting capabilities
 - it can be used to execute server-side `mediaflux services`
 
@@ -140,7 +142,3 @@ $ asset.doc.type.script.create :type myns:people
 ```
 
 
-Test list 
-
-+ dfdf
-+ adfafd
