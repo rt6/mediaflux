@@ -138,3 +138,8 @@ $ asset.doc.type.script.create :type <ns:doctype>
 $ asset.doc.type.script.create :type myns:people
                                 :out file:/home/user123/MakePeopleDocType.tcl
 ```
+
+
+Test list 
++ dfdf
++ adfafd
