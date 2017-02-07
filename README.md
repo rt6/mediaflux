@@ -118,6 +118,15 @@ $ asset.query :namespace parentNs:subNs
 # execute service on each item returned from query
 $ asset.query :where namespace>=parentNs :action pipe :service -name asset.destroy
 
+
+# ---
+# TCL scripting
+# The .tcl file contains a bunch of Mediaflux service calls mixed with TCL scripting 
+# (eg. declaring variables, maths calculations, string handling, etc)
+# ---
+
+$ source /path/to/script.tcl
+
 ```
 
 ## MF Desktop (web client)
