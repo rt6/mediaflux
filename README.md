@@ -142,3 +142,19 @@ $ asset.doc.type.script.create :type myns:people
 ```
 
 
+# MEDIAFLUX SERVER
+
+## Install Mediaflux server and Desktop (web GUI) 
+``` sh
+... to be added
+```
+
+## Start/Stop mediaflux server
+```sh
+$ java -Dapplication.home=/opt/mediaflux -jar /opt/mediaflux/bin/aserver.jar
+```
+
+## Start aTerm in Ubuntu terminal
+```sh
+$  java -jar /path/to/aterm.jar
+```
