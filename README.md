@@ -163,6 +163,16 @@ $ asset.doc.type.script.create :type myns:people
 $ java -Dapplication.home=/opt/mediaflux -jar /opt/mediaflux/bin/aserver.jar
 ```
 
+## Update Server Version
+```sh
+# aterm
+> server.instal :in file:/path/to/package.zip
+
+> server.restart :install true
+
+```
+
+
 ## Start aTerm in Ubuntu terminal
 ```sh
 $  java -jar /path/to/aterm.jar
